@@ -2,13 +2,13 @@
 Exam Task
 The task that need to be done for successful graduation from the QA Automation course
 
-Running the tests
-The tests are run on Chrome by default.
+There are 2 playlists to run test in different browsers (Chrome and Firefox)
 
 Getting Started
 - Install Chrome browser;
-- Set up IntelliJ IDEA. Can be downloaded through the link https://www.jetbrains.com/idea/download/#section=windows;
-- Set up JDK.  Can be downloaded through the link http://www.oracle.com/technetwork/java/javase/downloads/index.html;
+- Install Firefox browser;
+- Install IntelliJ IDEA. Can be downloaded through the link https://www.jetbrains.com/idea/download/#section=windows;
+- Install JDK.  Can be downloaded through the link http://www.oracle.com/technetwork/java/javase/downloads/index.html;
 - Set up Maven - http://maven.apache.org/download.cgi. Set environtment variables. Instruction can be found by the link http://www.apache-maven.ru/install.html;
 - Add following lines into your pom.xml build section:
 <build>
@@ -49,5 +49,6 @@ Getting Started
         </dependencies>
 
 Running the tests
-The tests are run on Chrome by default.
+The tests are run on Chrome by default. Next command must be performed to run tests from command line:
+mvn clean install
 
