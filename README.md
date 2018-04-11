@@ -12,3 +12,6 @@ How to run tests from this project:
 mvn clean install -DsuiteName=single_test_example.xml
 where single_test_example.xml is a name of specific TestNG xml file with tests.
 
+#ToDo: Please fix typos. like 'In command line to cd to project' or mentioning non-existing xml files single_test_example.xml. Also please list the scenario that was automated, otherwise it's not fully clear what is the purpose of this project
+ 
+

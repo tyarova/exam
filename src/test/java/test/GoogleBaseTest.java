@@ -11,6 +11,7 @@ import org.testng.annotations.Parameters;
 import page.GoogleStartPage;
 
 public class GoogleBaseTest {
+    //ToDo: Add JavaDocs
     WebDriver driver;
     GoogleStartPage startPage;
 
@@ -20,8 +21,8 @@ public class GoogleBaseTest {
      * 2.creates the driver object, depending on browser type
      * 3.opens environment link
      * 4. creates new object of the GoogleStartPage class
-     * @param browserType - the browser(Firefox, Chrome), used for test run
-     * @param envURL - the environment link, used for test run
+     * @param browserType - the browser(Firefox, Chrome), used for test run ToDo: please explain how you set default value
+     * @param envURL - the environment link, used for test run ToDo: please explain how you set default value
      */
     @Parameters({"browserType", "envURL"})
     @BeforeMethod
