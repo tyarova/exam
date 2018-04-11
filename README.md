@@ -11,7 +11,10 @@ Exam task that need to be done for successful graduation from the QA Automation 
 6. To run test from command line use following command:
 mvn clean install -DsuiteName=google_search_test_chrome.xml
 where google_search_test_chrome.xml is a name of specific TestNG xml file with tests.
-
+ 
 # Additional information
 
 The tests are run on Chrome by default. There are 2 playlists have been created to run tests in different browsers.
+
+#ToDo: please list the scenario that was automated, otherwise it's not fully clear what is the purpose of this project
+

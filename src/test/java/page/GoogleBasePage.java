@@ -6,12 +6,15 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class GoogleBasePage {
+    /**
+     * ToDo: Add JavaDoc
+     */
     WebDriver driver;
 
     /**
      * Constructor of GoogleBasePage class which takes Webdriver instance initialized in @BeforeMethod
      * for reuse in GoogleBasePage class methods
-     * @param driver - Webdriver instance
+     * @param driver - Webdriver instance ToDo: fix typo in WebDriver word
      */
     public GoogleBasePage(WebDriver driver) {
         this.driver = driver;
@@ -41,6 +44,7 @@ public abstract class GoogleBasePage {
     }
 
     /**
+     * ToDo: Make JavaDoc more clear
      * Returns {@code true} if needed element on Web page has been loaded
      * @return {@code true} if needed element on Web page has been loaded
      */

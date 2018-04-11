@@ -11,6 +11,7 @@ import java.util.List;
 
 public class GoogleSearchResultsPage extends GoogleBasePage {
 
+    //ToDo: Add JavaDocs for every WebElement
     @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
     private List<WebElement> searchResults;
 
@@ -26,7 +27,7 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
     /**
      * Constructor of GoogleSearchResultsPage class that takes instance from GoogleBasePage class and
      * initialize GoogleSearchResultsPage WebElements via PageFactory
-     * @param driver - Webdriver instance
+     * @param driver - Webdriver instance ToDo: Fix typo in WebDriver
      */
     public GoogleSearchResultsPage(WebDriver driver) {
         super(driver);
@@ -34,6 +35,7 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
     }
 
     /**
+     * ToDo: It's not clear in general what is this method for
      * Returns {@code true} if block with search results on the Google search results page has been loaded
      * @return {@code true} if block with search results on the Google search results page has been loaded
      * @throws NoSuchElementException if search results block has not been loaded
@@ -63,6 +65,7 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
     public List<String> getResults() {
         waitUntilElementIsVisible(searchResultsContainer, 5);
         List<String> resultsStringList = new ArrayList();
+        //ToDo: what's inside variable called x? ;)
         for(WebElement x: searchResults) {
             String elementTitle = x.getText().toLowerCase();
             resultsStringList.add(elementTitle);
@@ -71,10 +74,12 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
     }
 
     /**
+     * ToDo: What is this? should it be called getCurrentPageNumber() ?
      * Returns the number of the current page of search results
      * @return page number
      */
     public String returnCurrentPage(){
+        //ToDo: Should this variable be called currentPageNumber?
         String pageValue = currentPage.getText();
         return pageValue;
     }
