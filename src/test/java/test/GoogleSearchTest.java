@@ -9,6 +9,11 @@ import java.util.List;
 
 public class GoogleSearchTest extends GoogleBaseTest {
 
+
+    /**
+     * Passing of complex parameters to the basicSearchTest method
+     * @return an array of parameters to use in Test method
+     */
     @DataProvider
         public Object[][] searchTerm(){
         return new Object[][]{
@@ -42,7 +47,7 @@ public class GoogleSearchTest extends GoogleBaseTest {
         }
 
         searchResultsPage.switchToSecondSearchResultsPage();
-        Assert.assertEquals(searchResultsPage.returnCurrentPage(), "2",
+        Assert.assertEquals(searchResultsPage.getCurrentPageNumber(), "2",
                 "Pages do not match");
         Assert.assertEquals(results.size(), 10,
                 "There are less than 10 results have been found on the second page");

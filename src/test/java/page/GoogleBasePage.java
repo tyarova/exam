@@ -6,12 +6,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class GoogleBasePage {
+
+    /**
+     *Declaration of WebDriver variable within base class,
+     *for reuse in other classes' methods, that inherit from the base class
+     */
     WebDriver driver;
 
     /**
-     * Constructor of GoogleBasePage class which takes Webdriver instance initialized in @BeforeMethod
+     * Constructor of GoogleBasePage class which takes WebDriver instance initialized in @BeforeMethod
      * for reuse in GoogleBasePage class methods
-     * @param driver - Webdriver instance
+     * @param driver - WebDriver instance
      */
     public GoogleBasePage(WebDriver driver) {
         this.driver = driver;
@@ -41,8 +46,10 @@ public abstract class GoogleBasePage {
     }
 
     /**
-     * Returns {@code true} if needed element on Web page has been loaded
-     * @return {@code true} if needed element on Web page has been loaded
+     * Returns {@code true} if the element, we are waiting for, has been loaded on the Web page.
+     * Such an element is defined on the each page separately.
+     * We can say that the Web page has been loaded if this element is visible/clickable.
+     * @return {@code true} if the element, we are waiting for, has been loaded on the Web page
      */
     public abstract boolean isLoaded();
 

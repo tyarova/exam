@@ -11,22 +11,34 @@ import java.util.List;
 
 public class GoogleSearchResultsPage extends GoogleBasePage {
 
+    /**
+     * Declaration and initialization of the list of Web elements, that represent search results on the Web page.
+     */
     @FindBy(xpath = "//div[@class='srg']/div[@class='g']")
     private List<WebElement> searchResults;
 
+    /**
+     * Declaration and initialization of the Web element, that represents container with search results on the Web page.
+     */
     @FindBy(xpath = "//div[@id='res']")
     private WebElement searchResultsContainer;
 
+    /**
+     * Declaration and initialization of the Web element, that represents the second page of Google search results.
+     */
     @FindBy(xpath = "//a[@aria-label='Page 2']")
     private WebElement secondSearchResultsPage;
 
+    /**
+     * Declaration and initialization of the Web element, that represents the current page of Google search results.
+     */
     @FindBy(xpath = "//td[@class='cur']")
     private WebElement currentPage;
 
     /**
      * Constructor of GoogleSearchResultsPage class that takes instance from GoogleBasePage class and
      * initialize GoogleSearchResultsPage WebElements via PageFactory
-     * @param driver - Webdriver instance
+     * @param driver - WebDriver instance
      */
     public GoogleSearchResultsPage(WebDriver driver) {
         super(driver);
@@ -34,7 +46,8 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
     }
 
     /**
-     * Returns {@code true} if block with search results on the Google search results page has been loaded
+     * Verifies that the block with search results is displayed on the Web page.
+     * Visibility of the search results confirms that the Google search results page has been loaded.
      * @return {@code true} if block with search results on the Google search results page has been loaded
      * @throws NoSuchElementException if search results block has not been loaded
      */
@@ -62,20 +75,20 @@ public class GoogleSearchResultsPage extends GoogleBasePage {
      */
     public List<String> getResults() {
         waitUntilElementIsVisible(searchResultsContainer, 5);
-        List<String> resultsStringList = new ArrayList();
-        for(WebElement x: searchResults) {
-            String elementTitle = x.getText().toLowerCase();
-            resultsStringList.add(elementTitle);
+        List<String> resultsList = new ArrayList();
+        for(WebElement result: searchResults) {
+            String elementTitle = result.getText().toLowerCase();
+            resultsList.add(elementTitle);
         }
-        return resultsStringList;
+        return resultsList;
     }
 
     /**
-     * Returns the number of the current page of search results
+     * Returns the search results current page number
      * @return page number
      */
-    public String returnCurrentPage(){
-        String pageValue = currentPage.getText();
-        return pageValue;
+    public String getCurrentPageNumber(){
+        String currentPageNumber = currentPage.getText();
+        return currentPageNumber;
     }
 }
