@@ -21,3 +21,4 @@ The project contains best practices of usage OOP and PageObject/PageFactory patt
 - test package, which contains test, to verify Google search 
 - google_search_test_chrome.xml file - playlist with tests to run in chrome browser
 - google_search_test_firefox.xml file - playlist with tests to run in firefox browser
+- google_search_test_firefox.xml file - playlist with tests to run in firefox browser
